@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>한마음선원 지원 안내</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">대한불교 조계종 한마음선원</p>
+        <h1>국내·국외 지원 안내</h1>
+        <p>
+          본원을 포함해 20여 곳 이상의 지원 정보를 한눈에 확인하세요. 각 지원을
+          클릭하면 전화번호, 주소, 구글지도 위치, 웹사이트를 바로 확인할 수
+          있습니다.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls">
+        <label class="search">
+          <span>지원 검색</span>
+          <input id="search" type="search" placeholder="지원 이름 또는 지역 검색" />
+        </label>
+        <div class="legend">
+          <span class="badge badge--korea">국내</span>
+          <span class="badge badge--overseas">국외</span>
+        </div>
+      </section>
+
+      <section id="branch-list" class="branch-list" aria-live="polite"></section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        정보는 최신화를 위해 상시 업데이트될 수 있습니다. 정확한 정보는 각 지원
+        웹사이트 또는 전화로 확인하세요.
+      </p>
+    </footer>
+
+    <template id="branch-card">
+      <article class="branch-card">
+        <button class="branch-card__header" type="button">
+          <div>
+            <h2 class="branch-card__name"></h2>
+            <p class="branch-card__region"></p>
+          </div>
+          <span class="branch-card__toggle">자세히 보기</span>
+        </button>
+        <div class="branch-card__details">
+          <div class="detail">
+            <span>전화번호</span>
+            <a class="detail__phone" href="#"></a>
+          </div>
+          <div class="detail">
+            <span>주소</span>
+            <p class="detail__address"></p>
+          </div>
+          <div class="detail">
+            <span>구글지도</span>
+            <a class="detail__map" href="#" target="_blank" rel="noreferrer">지도 보기</a>
+          </div>
+          <div class="detail">
+            <span>웹사이트</span>
+            <a class="detail__site" href="#" target="_blank" rel="noreferrer">웹사이트 방문</a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
