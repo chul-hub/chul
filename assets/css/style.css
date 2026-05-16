@@ -1,0 +1,115 @@
+:root {
+  color-scheme: light dark;
+  --bg-color: radial-gradient(circle at top, #11053a, #050716 60%, #01020a 100%);
+  --panel-color: rgba(14, 18, 41, 0.88);
+  --accent: #ff8e3c;
+  --accent-light: rgba(255, 142, 60, 0.3);
+  --text: #f5f5f5;
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  --border-radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard", "Spoqa Han Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background: var(--bg-color);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+h1,
+ h2 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.game-container {
+  width: min(1080px, 100%);
+  display: grid;
+  gap: 24px;
+}
+
+.hud {
+  background: var(--panel-color);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hud__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 1.1rem;
+}
+
+.hud__item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.canvas-wrapper {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, rgba(11, 13, 35, 0.92), rgba(3, 5, 15, 0.96));
+}
+
+.message {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  text-align: center;
+  color: #ffffff;
+  pointer-events: none;
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.help {
+  background: var(--panel-color);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  line-height: 1.6;
+}
+
+.help ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .hud,
+  .help {
+    padding: 20px;
+  }
+
+  .hud__stats {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
