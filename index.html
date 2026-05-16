@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>한마음선원 국내외 지원 안내</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-content">
+      <h1>한마음선원 국내외 지원 안내</h1>
+      <p>
+        전국과 해외에 위치한 한마음선원 지원의 연락처와 주소, 구글 지도를 한눈에 확인해 보세요.
+        각 지원을 선택하면 자세한 정보를 확인하고 지도로 위치를 확인할 수 있습니다.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="support-section" id="domestic-section">
+      <div class="section-title">
+        <h2>국내 지원</h2>
+        <p>전국 15개의 지원을 찾아보세요.</p>
+      </div>
+      <div class="support-layout" data-section="domestic">
+        <div class="support-list" id="domestic-list" aria-label="국내 지원 목록"></div>
+        <div class="support-detail" id="domestic-detail" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="support-section" id="global-section">
+      <div class="section-title">
+        <h2>국외 지원</h2>
+        <p>해외 10개의 지원을 지역별로 살펴보세요.</p>
+      </div>
+      <div class="support-layout" data-section="global">
+        <div class="support-list" id="global-list" aria-label="국외 지원 목록"></div>
+        <div class="support-detail" id="global-detail" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>자료 출처: 한마음선원 공식 홈페이지.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
